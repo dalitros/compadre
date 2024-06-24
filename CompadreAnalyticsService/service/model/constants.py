@@ -1,0 +1,5 @@
+RISK_OF_INJURY = 'risk_of_injury'
+WARMP_UP = 'warm_up'
+INTENSITY = 'intensity'
+RECOVERY = 'recovery'
+BODY_CONNECTION = 'body_connection'
