@@ -59,7 +59,10 @@ def lambda_handler(event, context):
             ExpressionAttributeNames={
                 '#user_id': 'userId',
                 '#muscle_name': 'muscleName'
-            }
+            },
+                     
+            ScanIndexForward=False,  # Sort in descending order based on the sort key
+            Limit=50  # Limit to the latest 50 items
         )
 
         if not response['Items']:
@@ -101,3 +104,4 @@ def lambda_handler(event, context):
             'statusCode': 500,
             'body': json.dumps({"error": "Internal server error"})
         }
+
